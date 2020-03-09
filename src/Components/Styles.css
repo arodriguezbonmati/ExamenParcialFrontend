@@ -1,0 +1,70 @@
+.film_image {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.full_film {
+    border: 1px solid black;
+    margin: 10px;
+    height: 271px;
+}
+
+.episode {
+    display: flex;
+    justify-content: center;
+}
+
+.p_episode {
+    margin: 0px;
+}
+
+.image {
+    object-fit: contain;
+    height: 200px;
+    width: 200px;
+}
+
+.generalInfo {
+    display: flex;
+}
+
+.characters_container {
+    background-color: #bfb8b8;
+    border-left: 3px solid black;
+}
+
+.credits {
+    display: flex;
+    margin: 10px;
+}
+
+.p_info {
+    margin: 0px;
+    text-align: justify;
+}
+
+.arrow {
+    font-size: xx-large;
+    display: flex;
+    padding: 15px;
+}
+
+.p_info_crawl {
+    margin: 0px;
+    text-align: justify;
+    width: 300px;
+}
+
+.completeEpisode {
+    padding: 15px;
+}
+
+.arrow_image {
+    width: 25px;
+    cursor: pointer;
+}
+
+.poster {
+    cursor: pointer;
+}

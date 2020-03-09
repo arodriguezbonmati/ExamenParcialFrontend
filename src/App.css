@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.showEpisodes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main_content {
+  display: flex;
+}
