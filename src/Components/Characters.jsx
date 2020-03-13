@@ -17,6 +17,15 @@ const Characters = props => {
   return (
     <div className="completeEpisode">
       <div className="generalInfo">
+        <div className="select">
+          <select name="select" onChange={e => props.selec(episode_id, e.target.value)}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
         <div className="generalInfo_image">
           <img className="general_image" src={image} />
         </div>

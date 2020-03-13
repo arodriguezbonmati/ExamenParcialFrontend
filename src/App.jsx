@@ -14,6 +14,20 @@ class App extends Component {
     data: { ...Films }
   };
 
+  rating = (id, ratingFilm) => {
+    const parsedRating = parseInt(ratingFilm, 10);
+    let clonedState = cloneDeep(this.state);
+    clonedState.data.results[id - 1].rating.ratingsArr.push(parsedRating);
+
+    const average = arr =>
+      Math.round(arr.reduce((prev, curr) => prev + curr) / arr.length);
+    clonedState.data.results[id - 1].rating.ratingAvg = average(
+      clonedState.data.results[id - 1].rating.ratingsArr
+    );
+
+    this.setState({ data: clonedState.data });
+  };
+
   showChar = episode_name => {
     let clonedState = cloneDeep(this.state);
     clonedState.show_characters = true;
@@ -44,6 +58,7 @@ class App extends Component {
                     key={item.id}
                     filmInfo={item}
                     func={this.showChar}
+                    rate={item.rating.ratingsArr.length}
                   />
                 );
               })}
@@ -51,7 +66,10 @@ class App extends Component {
             {clonedState.show_characters === false ? null : (
               <div className="characters_container">
                 <Arrow r={this.return} />
-                <Characters filmInfo={this.state.episode} />
+                <Characters 
+                  filmInfo={this.state.episode} 
+                  selec={this.rating}
+                />
               </div>
             )}
           </div>

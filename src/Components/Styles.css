@@ -5,9 +5,9 @@
 }
 
 .full_film {
-    border: 1px solid black;
     margin: 10px;
     height: 271px;
+    margin-bottom: 10px;
 }
 
 .episode {
@@ -67,4 +67,18 @@
 
 .poster {
     cursor: pointer;
+}
+
+.film_rating {
+    width:110px;
+    height:10px;
+    margin: 5px;
+}
+
+.yellowStar {
+    width: 20px;
+}
+
+.whiteStar {
+    width: 20px;
 }
